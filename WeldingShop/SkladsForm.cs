@@ -476,6 +476,17 @@ namespace SpecClothes
             else ContentOfSkladUpdate(lvWearsFinish);
         }
 
+        private void btnAddNewSklad_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = new SqlConnection(Program.connectionString))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand($"DECLARE @num INT \r\nIF (SELECT count(*) FROM Sklads) = 0\r\n    BEGIN\r\n\t\tSET @num = 1;\r\n    END;\r\nELSE SET @num = (SELECT TOP 1 ID+1 FROM Sklads ORDER BY ID DESC);\r\nSELECT @num;\r\nINSERT INTO Sklads VALUES(@num, '');", conn))
+                    cmd.ExecuteNonQuery();
+                conn.Close();
+                SkladsUpdate();
+            }
 
+        }
     }
 }

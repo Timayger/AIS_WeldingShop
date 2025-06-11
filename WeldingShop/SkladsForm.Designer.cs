@@ -58,12 +58,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.flpSklads = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnAddNewSklad = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tlpMain.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tlpFinish.SuspendLayout();
             this.tlpStart.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbSkladNum
@@ -134,8 +137,8 @@
             this.tlpMain.Controls.Add(this.tlpStart, 1, 0);
             this.tlpMain.Controls.Add(this.btnBack, 0, 3);
             this.tlpMain.Controls.Add(this.btnMoveToSklad, 2, 3);
-            this.tlpMain.Controls.Add(this.flpSklads, 0, 1);
             this.tlpMain.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tlpMain.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tlpMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpMain.Location = new System.Drawing.Point(0, 0);
             this.tlpMain.Margin = new System.Windows.Forms.Padding(4);
@@ -145,6 +148,7 @@
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tlpMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpMain.Size = new System.Drawing.Size(2022, 929);
             this.tlpMain.TabIndex = 9;
             // 
@@ -447,11 +451,11 @@
             // 
             this.flpSklads.AutoScroll = true;
             this.flpSklads.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flpSklads.Location = new System.Drawing.Point(4, 64);
+            this.flpSklads.Location = new System.Drawing.Point(4, 4);
             this.flpSklads.Margin = new System.Windows.Forms.Padding(4);
             this.flpSklads.Name = "flpSklads";
             this.flpSklads.Padding = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.flpSklads.Size = new System.Drawing.Size(497, 380);
+            this.flpSklads.Size = new System.Drawing.Size(491, 312);
             this.flpSklads.TabIndex = 9;
             // 
             // tableLayoutPanel2
@@ -470,6 +474,38 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(497, 52);
             this.tableLayoutPanel2.TabIndex = 10;
+            // 
+            // btnAddNewSklad
+            // 
+            this.btnAddNewSklad.AutoSize = true;
+            this.btnAddNewSklad.BackColor = System.Drawing.Color.Wheat;
+            this.btnAddNewSklad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddNewSklad.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnAddNewSklad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNewSklad.Font = new System.Drawing.Font("Book Antiqua", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddNewSklad.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnAddNewSklad.Location = new System.Drawing.Point(3, 323);
+            this.btnAddNewSklad.Name = "btnAddNewSklad";
+            this.btnAddNewSklad.Size = new System.Drawing.Size(493, 56);
+            this.btnAddNewSklad.TabIndex = 14;
+            this.btnAddNewSklad.Text = "Добавить новый склад";
+            this.btnAddNewSklad.UseVisualStyleBackColor = false;
+            this.btnAddNewSklad.Click += new System.EventHandler(this.btnAddNewSklad_Click);
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.btnAddNewSklad, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.flpSklads, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 63);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(499, 382);
+            this.tableLayoutPanel3.TabIndex = 18;
             // 
             // SkladsForm
             // 
@@ -495,6 +531,8 @@
             this.tlpStart.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -529,5 +567,7 @@
         private System.Windows.Forms.Button btnMoveToSkladNon;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnGenerateReport;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button btnAddNewSklad;
     }
 }
